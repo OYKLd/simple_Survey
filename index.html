@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sondage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Simple Sondage</h1>
+            <p>Créez et participez à des sondages simples</p>
+        </header>
+
+        <main>
+            <!-- Section création de sondage -->
+            <section id="create-survey" class="survey-section">
+                <h2>Créer un nouveau sondage</h2>
+                <form id="survey-form">
+                    <div class="form-group">
+                        <label for="question">Question *</label>
+                        <input type="text" id="question" placeholder="Entrez votre question..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Options *</label>
+                        <div id="options-container">
+                            <div class="option-input">
+                                <input type="text" placeholder="Option 1" required>
+                                <button type="button" class="remove-option" style="display: none;">×</button>
+                            </div>
+                            <div class="option-input">
+                                <input type="text" placeholder="Option 2" required>
+                                <button type="button" class="remove-option" style="display: none;">×</button>
+                            </div>
+                        </div>
+                        <button type="button" id="add-option">+ Ajouter une option</button>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Créer le sondage</button>
+                </form>
+            </section>
+
+            <!-- Section liste des sondages -->
+            <section id="surveys-list" class="survey-section">
+                <h2>Sondages disponibles</h2>
+                <div id="surveys-container">
+                    <!-- Les sondages seront ajoutés dynamiquement ici -->
+                </div>
+            </section>
+
+            <!-- Section détail d'un sondage -->
+            <section id="survey-detail" class="survey-section" style="display: none;">
+                <button id="back-to-list" class="btn-secondary">← Retour à la liste</button>
+                <div id="survey-content">
+                    <!-- Le contenu du sondage sera affiché ici -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Simple Sondage - Application de sondage web</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
